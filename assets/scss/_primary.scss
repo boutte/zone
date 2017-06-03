@@ -3,7 +3,131 @@
 //  ==========================================================================
 
 body {
-  font-family:helvetica;
+  font-family:sans-serif;
   font-weight:bold;
   color:$text;
+  margin:0;
+  padding:0;
+}
+
+a {
+  text-decoration:none;
+  color:#333;
+}
+
+.mb-page-wrap {
+  display:flex;
+  flex-direction: column;
+  width:100vw;
+  position:fixed;
+}
+
+.mb-top {
+  width:100%;
+  background:#ccc;
+  padding:$pad;
+  height:3vh;
+}
+
+.mb-content-wrap {
+  display:flex;
+  flex-direction: column;
+  @media (orientation:landscape){
+      flex-direction: row;
+  }
+}
+
+.mb-detail {
+  background:#eee;
+  width:100%;
+  height:37vh;
+  @include media-up(maxtablet){
+    height:36.5vh;
+  }
+  @media (orientation:landscape){
+    width:50%;
+    height:97vh;
+    @include media-up(maxtablet){
+      width:38%;
+    }
+  }
+}
+
+.mb-list {
+  width:100%;
+  height:57vh;
+  overflow:scroll;
+  @include media-up(maxtablet){
+    height:60.5vh;
+  }
+  @media (orientation:landscape){
+    width:50%;
+    height:97vh;
+    @include media-up(maxtablet){
+      width:62%;
+    }
+  }
+}
+
+.mb-list__nav-list {
+  display:flex;
+  justify-content: flex-start;
+  align-items:center;
+  height:57vh;
+  @media (orientation:landscape){
+    flex-direction: column;
+  }
+  @include media-up(maxtablet){
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.mb-list__nav-item {
+  margin:$pad;
+  flex-basis:74vw;
+  @include media-up(maxtablet){
+    margin:0;
+    flex-basis:33.333%;
+  }
+}
+
+a.mb-list__nav-link {
+  background-color:#666;
+  color:#ccc;
+  display:block;
+  width:calc(57vh * 0.75);
+  height:calc(57vh * 0.75);
+  max-width: 80vw;
+  max-height: 80vw;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  &:hover {
+    background:#444;
+    color:#fff;
+  }
+  @include media-up(maxtablet){
+    width:33.333vw;
+    height:33.333vw;
+  }
+  @media (orientation:landscape){
+    width:calc(50vw * 0.84);
+    height:calc(50vw * 0.84);
+    @include media-up(maxtablet){
+      width:calc(62vw * 0.33333);
+      height:calc(62vw * 0.33333);
+    }
+  }
+}
+
+a.mb-list__nav-link--gray1 {
+  background-color:$gray1
+}
+a.mb-list__nav-link--gray2 {
+  background-color:$gray2
+}
+a.mb-list__nav-link--gray3 {
+  background-color:$gray3
 }

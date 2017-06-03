@@ -2,5 +2,22 @@
 //  Variables
 //  ==========================================================================
 
+/* breakpoints */
+$breakpoints: (
+  mindeskmedium: 1201px,
+  maxdesksmall: 1200px,
+  mindesksmall: 769px,
+  maxtablet: 768px,
+  mintablet: 481px,
+  maxmobile: 480px
+);
+
+/* spacing units */
+$pad : 12px;
+
+/* colors */
 $background : #fff;
 $text : #545353;
+$gray1 : #676767;
+$gray2 : #4D4D4D;
+$gray3 : #595959;
